@@ -372,34 +372,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: spidey@Medium Run
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 6527c22c0704a0347933fce7606636b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6527c22c0704a0347933fce7606636b4, type: 3}
---- !u!1 &4831231212709074346 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6527c22c0704a0347933fce7606636b4,
-    type: 3}
-  m_PrefabInstance: {fileID: 5749569369378187515}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8206229723940283283
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831231212709074346}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0cfe6293558110648bdc6a29eeb2d1db, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &5206209120402509584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6527c22c0704a0347933fce7606636b4,
