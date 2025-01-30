@@ -19,7 +19,7 @@ public class RagdollInteractable : Interactable
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isHeld)
         {
@@ -39,6 +39,7 @@ public class RagdollInteractable : Interactable
                 r.isKinematic = false;
             }
             spineRB.isKinematic = true;
+            //spineRB.transform.position = playerHand.position;
         }
         else
         {

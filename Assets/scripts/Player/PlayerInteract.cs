@@ -17,6 +17,9 @@ public class PlayerInteract : MonoBehaviour
     private InputManager inputManager;
     [SerializeField]
     private Animator playerAnimator;
+
+    private PickupInteractable inHand;
+
     [SerializeField]
     private Transform hand;
     [SerializeField]
@@ -35,6 +38,7 @@ public class PlayerInteract : MonoBehaviour
         playerUI= GetComponent<PlayerUI>();
         inputManager = GetComponent<InputManager>();
         handStart = hand.transform;
+        inHand = null;
     }
 
     // Update is called once per frame
@@ -52,6 +56,10 @@ public class PlayerInteract : MonoBehaviour
                 if(inputManager.onFoot.Interact.triggered)
                 {
                     interactable.BaseInteract();
+                    if(interactable is PickupInteractable && inHand == null)
+                    {
+                        inHand = (PickupInteractable)interactable;
+                    }
                 }
             }
         }
@@ -102,6 +110,15 @@ public class PlayerInteract : MonoBehaviour
                 attackSpeed = 0f;
                 attacking = false;
                 playerAnimator.SetBool("IsAttacking", false);
+            }
+        }
+
+        if(inputManager.onFoot.Throw.triggered)
+        {
+            if(inHand != null)
+            {
+                inHand.Drop();
+                inHand = null;
             }
         }
     }
